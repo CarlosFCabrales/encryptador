@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;    
+    font-size: 1.3em;        /* le decimos que sea 1.3 mas grande que la fuente default del navegador*/
+}
+
+
+header{
+    background-color: #001e3a;    /* el color de fondo del header*/
+    padding: 30px 0;                /* le da 30 px de espacio arriba y abajo, 0 en los laterales */  
+}
+
+.arriba{
+    position: relative; 
+    width: 80%;                /* solo vamos a usar el 80% del ancho de la pagina*/           
+    margin: 0 auto;        
+    text-align: center;     
+}
+
+.cuerpo {
+    /* position: relative; */
+    /*   background-color: blueviolet;  */
+    width: 80%;
+    color: black;
+    margin-left: 10%;   
+    /* padding: 5em 0; */    
+}
+
+.indicacion{
+    /* position: relative; */
+    padding: 2em 0; 
+    text-align: center; 
+}
+
+.datos {
+    /*  background-color: cadetblue;   */
+    padding-bottom: 2em;
+}
+
+.datos li{
+    display: inline-block;
+    width: 49%;
+    box-sizing: border-box;
+/*    border-color: black;
+    border-width: 2px;   
+    border-style: solid;
+    border-radius: 20px;  */
+}
+
+.encryptos {
+ /*   background-color: coral;    */
+ text-align: center;
+}
+
+.encryptos label{
+   display: block;
+   text-align: center;
+   padding: 0.7em 0 0.5em;
+}
+
+textarea {
+    width: 90%;
+    height: 16em;    
+    border-radius: 10px;
+    margin-bottom: 2em;
+    resize: none;
+}
+
+.botones {    
+    padding-top: 1.1em;
+    width: 60%;
+    margin-left: 22%;
+    /* background-color: darkmagenta;  */
+    padding-bottom: 2.5em;
+}
+
+.enviar {
+    width: 20%;
+    padding: 10px 0;
+    margin-right: 8%;
+    font-weight: bolder;
+    color: white;
+    background-color: #001e3a;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #001e3a;    /* el color de fondo del header*/
+    padding: 60px 0;                /* le da 30 px de espacio arriba y 0 en los demas lados */      
+}
+
+.patas {
+    width: 80%;
+    position: relative;
+    padding-right: 8%; 
+    margin: 0 auto;    
+    text-align: right;       /* alinea el parrafo a la derecha */
+}
+
+@media screen and (max-width:480px){
+    body{
+        background-color: #001e3a;
+    }
+
+    main {
+        background-color: white;
+    }
+}
