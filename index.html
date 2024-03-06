@@ -18,34 +18,37 @@
 
         <main>
             <div class="cuerpo">
-                <p class="indicacion">Por favor escribe la frase a encriptar sin utilizar acentos o caracteres especiales</p>
+                <p class="indicacion">Por favor escribe la frase en minusculas y sin utilizar acentos o caracteres especiales</p>
 
                 <ul class="datos">
-                    <form class="encryptos">
+                    
                         <li>                            
-                            <label for="oracionlimpia">Frase sin encriptar</label>
+                            <label for="oracionlimpia">Entrada de texto</label>
                             <textarea id="oracionlimpia"></textarea>
                         </li>
                         <li>                            
-                            <label for="oracioncrypto">Frase encriptada</label>
-                            <textarea id="oracioncrypto"></textarea>
+                            <label for="oracioncrypto">Salida de texto</label>
+                            <textarea id="oracioncrypto" readonly></textarea>
                         </li>
                         
                         <div class="botones">
-                            <input type="submit" value="ENCRIPTAR" class="enviar">
-                            <input type="submit" value="DESENCRIPTAR" class="enviar">
-                            <input type="submit" value="LIMPIAR" class="enviar">
+                            <button class="enviar" onclick="botonEncriptar();" >ENCRIPTAR</button>
+                            <button class="enviar" onclick="botonDesencriptar();">DESENCRIPTAR</button> 
+                            <button class="enviar" onclick="limpia();">LIMPIAR</button>                          
+                            <button class="enviar" onclick="copiarTexto();">COPIAR</button>                          
                         </div>
-                    </form>
+                    
                 </ul>
             </div>
         </main>
 
+    <script src="app.js"></script>
+
         <footer>
             <div class="patas">
-                <p>&copy Derechos Reservados 2024</p>
+                <p>&copy Derechos Reservados 2024<br>Carlos Camacho</p>
             </div>
-        </footer>
+        </footer>        
     </body>
 
 </html>
