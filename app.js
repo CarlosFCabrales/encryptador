@@ -2,8 +2,22 @@
 let palabra = document.getElementById("oracionlimpia");
 let mensaje = document.getElementById("oracioncrypto");
 
+
+/* funcion para checar que no haya caracteres especiales en la palabra a encriptar  */
+function validateInput1() {
+    var inputValue = document.getElementById("oracionlimpia").value; 
+    var regex = /^[a-zA-Z\s]*$/; // checa que solo sean letras o espacio
+
+    if (!regex.test(inputValue)) {
+        alert("No se permite usar numeros, acentos o caracteres especiales");
+        
+    } else {
+        botonEncriptar();   
+    }        
+}
+
 /* Funcion para llamar al boton de encriptar */
-function botonEncriptar(){                    
+function botonEncriptar(){                        
     const textoEncriptado = encriptar(palabra.value);  
     mensaje.value = textoEncriptado;
 
@@ -15,6 +29,8 @@ function encriptar(stringEncriptada){
     let matrizCodigo = [["e","enter"], ["i","imes"], ["a","ai"], ["o","ober"], ["u","ufat"]]; 
     stringEncriptada = stringEncriptada.toLowerCase();
    
+    
+
     for(let i = 0; i < matrizCodigo.length; i++){        
         if(stringEncriptada.includes(matrizCodigo[i][0])){
             stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0],matrizCodigo[i][1]);
@@ -24,6 +40,20 @@ function encriptar(stringEncriptada){
     return stringEncriptada
 }
 
+
+
+/* funcion para checar que no haya caracteres especiales en la palabra a desencriptar  */
+function validateInput2() {
+    var inputValue = document.getElementById("oracionlimpia").value; 
+    var regex = /^[a-zA-Z\s]*$/; // checa que solo sean letras o espacio
+
+    if (!regex.test(inputValue)) {
+        alert("No se permite usar numeros, acentos o caracteres especiales");
+        
+    } else {
+        botonDesencriptar();   
+    }        
+}
 
 
 /* Funcion para llamar al boton de desencriptar */
@@ -64,11 +94,6 @@ function copiarTexto() {
 
     navigator.clipboard.writeText(textoACopiar.value)    // usamos el metodo clipbpard para copiar el valor del textArea
 }
-
-
-
-
-
 
 
 
